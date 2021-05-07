@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Friendly Monsters</title>
+  <link href="/css/tachyons.css" rel="stylesheet">
+  <body class="sans-serif near-black ph2 ph5-ns">
+    <main class="cf-ns f4">
+		{% for mon in collections.monsters %}
+			<h2><a href="/monsters/{{ mon.data.Name }}">{{ mon.data.Name }}</a></h2>
+			<div class="flex">
+				<div 
+					class="w-50 ba"
+					style="background: url({{ mon.data.Habitat }}) no-repeat; max-height: 400px; max-width: 600px;">
+					<img
+					class="db"
+					style="width: 200px; margin: 100px auto;"
+					src="{{ mon.data.Pic }}"
+					alt="{{ mon.data.Name }}'s picture">
+				</div>
+				<div class="w-50 pl3">
+					<p><b>Age:</b> {{ mon.data.Age }}</p>
+					<p><b>Trait:</b> {{ mon.data.Trait }}</p>
+					<p><b>Favourite thing:</b> {{ mon.data.Fave }}</p>
+				</div>
+			</div>
+		{% endfor %}
+    </main>
+  </body>
+</html>
