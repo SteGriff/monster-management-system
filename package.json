@@ -1,0 +1,25 @@
+{
+  "name": "monster-management-system",
+  "version": "1.0.0",
+  "description": "Kinopio to eleventy site",
+  "main": ".eleventy.js",
+  "devDependencies": {},
+  "dependencies": {
+    "@11ty/eleventy": "^0.12.0",
+    "@11ty/eleventy-plugin-rss": "^1.0.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+	"build" : "node ./build.js && eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SteGriff/monster-management-system.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SteGriff/monster-management-system/issues"
+  },
+  "homepage": "https://kinopio-monsters.netlify.app"
+}
